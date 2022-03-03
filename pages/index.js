@@ -1,6 +1,7 @@
 import {getSession} from "next-auth/react";
-import {Sidebar} from "../components/Sidebar";
+import Sidebar from "../components/Sidebar";
 import Center from "../components/Center";
+import PlayPanel from "../components/PlayPanel";
 
 export default function Home() {
 
@@ -8,6 +9,7 @@ export default function Home() {
         <div className="bg-black w-full h-screen pl-4 pb-32 box flex justify-stretch box-border overflow-hidden">
             <Sidebar/>
             <Center />
+            <PlayPanel />
         </div>
     )
 }

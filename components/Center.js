@@ -4,7 +4,7 @@ import {signOut, useSession} from "next-auth/react";
 import {useRecoilValue} from "recoil";
 import {playlistIdState} from "../atoms/playlistAtom";
 import useSpotify from "../hooks/useSpotify";
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import Songs from "./Songs";
 
 const Center = () => {
@@ -45,7 +45,7 @@ const Center = () => {
                         <div>
                             <span className=''>PLAYLIST</span>
                             <h3 className='leading-none text-[50px] mb-4'>{playlist?.name}</h3>
-                            <p>{playlist?.owner?.display_name} • {playlist?.tracks.total} songs</p>
+                            <p>{playlist?.owner?.display_name} • {playlist?.tracks.total} songs}</p>
                         </div>
                     </div>
                     <div className='h-full bg-black bg-opacity-20 p-8 overflow-y-scroll scrollbar-hide'>
